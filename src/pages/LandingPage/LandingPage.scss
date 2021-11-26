@@ -1,0 +1,65 @@
+.landing-page{
+    margin: 0px !important;
+        &__img{
+            max-width:300px;
+            height: auto;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        &__heading{
+            font-weight: bold;
+            line-height: 100%;
+            font-size: 30px;
+            margin: 10px 0px;
+        }
+        &__sub-heading{
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 20px;
+        }
+        .landing-page-icon{
+            display: flex;
+            align-items: center;
+            margin: 10px 0px;
+            &__img{
+                margin-right: 1rem;
+            }
+            &__text{
+                font-family: Verdana, sans-serif;
+                font-weight: normal;
+                font-size: 14px;
+                font-weight: 400;
+                letter-spacing: 0.1px;
+                word-spacing: 0px;
+                color: #000;
+            }
+        }
+        .btn-container{
+            text-align: center;
+            margin: 10px 0px;
+            .btn-join{
+                background-color:#E46F2C !important;
+                width: 170px;
+                outline: none;
+                border: none;
+                border-radius: 5px;
+                color: #fff;
+                padding: 7px;
+                margin: 10px;
+            }
+        }
+        .ifram-container iframe{
+            border-radius: 20px;
+            max-width: 100%;
+            height: auto;
+            border: none !important;
+            outline: none !important;
+        }
+        &__form-our-container{
+            background-color: #FCECCA !important;
+            border-radius: 20px !important;
+            padding: 10px !important;
+        }
+}

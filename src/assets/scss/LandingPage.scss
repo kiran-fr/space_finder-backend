@@ -1,0 +1,97 @@
+.landing-page{
+    margin: 15px !important;
+    margin-top: 19% !important;
+        &--content{
+            margin-top: -50px !important;
+        }
+        &__heading{
+            font-weight: bold;
+            line-height: 100%;
+            font-size: 30px;
+            margin: 10px 0px;
+        }
+        &__sub-heading{
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.2px;
+        }
+        .landing-page-icon{
+            display: flex;
+            align-items: center;
+            margin: 10px 0px;
+            &__img{
+                margin-right: 1rem;
+            }
+            &__text{
+                font-weight: normal;
+                font-size: 14px;
+                font-weight: 400;
+                letter-spacing: 0.1px;
+                word-spacing: 0px;
+                color: #000;
+            }
+        }
+        .btn-container{
+            text-align: center;
+            margin: 10px 0px;
+            .btn-join{
+                background-color:#E46F2C !important;
+                width: 170px;
+                outline: none;
+                border: none;
+                border-radius: 5px;
+                color: #fff;
+                padding: 7px;
+                margin: 10px;
+            }
+        }
+        .ifram-container iframe{
+            border-radius: 20px;
+            max-width: 100%;
+            height: auto;
+            border: none !important;
+            outline: none !important;
+        }
+        &__form-cleaner{
+            margin-top: 50px;
+        }
+        &__form-our-container{
+            background-color: #FCECCA !important;
+            border-radius: 20px !important;
+            padding: 12px !important;
+            padding-top: 20px !important;
+            margin-top: 15px;
+            box-shadow: none !important;
+            max-height: 150px !important;
+            &__img{
+                margin-left: 8px;
+            }
+            &__rightside-content{
+                align-items: center !important;
+                justify-content: center !important;
+                text-align: center;
+            }
+            &__name{
+                font-weight: bold;
+                font-size: 18px;
+                margin-bottom: 0px;
+            }
+            &__content-text{
+                text-overflow: ellipsis;
+                font-family: 'Times New Roman', Times, serif;
+                font-family: Amazon Ember;
+                font-weight: 800;
+                font-size: 13px;
+                overflow: hidden;
+            }
+        }
+}
+.landing-page-img{
+    margin-top: 80px;
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
