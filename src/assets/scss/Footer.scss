@@ -22,3 +22,9 @@
 
             }
         }
+
+        @media (max-width:599px) {
+            .footer-img{
+                display: none;
+            }
+        }

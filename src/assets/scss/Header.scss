@@ -2,6 +2,11 @@
     // background-color: #fff;
     .nav-header{
         background-color: #fff;
+        box-shadow: none !important;
         // padding: 10px 0px !important;
-        height: 82px;
+        height: 75px;
+        &__right-text{
+            color: #000;
+            margin-left: 5px;
+        }
     }
