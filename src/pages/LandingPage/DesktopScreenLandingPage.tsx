@@ -1,6 +1,6 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, Avatar, Card } from "@mui/material";
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Button, Carousel } from "react-bootstrap";
 import cleanerImage from "../../assets/images/cleaner-img.svg";
 import identicalJobIcon from "../../assets/images/identical-job-icon.svg";
 import paymentIcon from "../../assets/images/payment-icon.svg";
@@ -9,7 +9,7 @@ import gardian from "../../assets/images/gradian-image.svg";
 import timesImg from "../../assets/images/times-img.svg";
 import bbcNewsImg from "../../assets/images/BBC-img.svg";
 import landingPageImage from "../../assets/images/girl-img.png";
-
+import { SampleData } from "../../SampleData";
 const data = [
   {
     img: identicalJobIcon,
@@ -83,22 +83,22 @@ export default function DesktopScreenLandingPage(props: any) {
       </div>
       {/* all images */}
       <Grid
-        className="mobile-screen common-padding"
+        className=" common-padding"
         container
         direction={"row"}
         justifyContent={"space-between"}
         alignItems={"center"}
       >
-        <Grid item xs={3} className="img">
+        <Grid item xs={12} sm={3} className="img">
           <Typography>In the news</Typography>
         </Grid>
-        <Grid item xs={3} className="logo-image-container">
+        <Grid item xs={12} sm={3} className="logo-image-container">
           <img src={gardian} className="logo-image" />
         </Grid>
-        <Grid item xs={3} className="logo-image-container">
+        <Grid item sm={3} xs={12} className="logo-image-container">
           <img src={timesImg} className="logo-image" />
         </Grid>
-        <Grid item xs={3} className="logo-image-container">
+        <Grid item xs={12} sm={3} className="logo-image-container">
           <img src={bbcNewsImg} className="logo-image" />
         </Grid>
       </Grid>
@@ -113,19 +113,69 @@ export default function DesktopScreenLandingPage(props: any) {
             <h1 className="landing-page__heading">Testimonials</h1>
           </Grid>
           <Grid className="mobile-screen landing-page__sub-content ">
-            <ul>
+            {/* <ul>
               <li>
                 Here is a what out employees think about us and how we look out
                 for them
               </li>
-            </ul>
+            </ul> */}
+
+            <div className="landing-page__form-cleaner" style={{}}>
+              <div>
+                <Carousel
+                  style={{
+                    maxWidth: "400px",
+                    height: 200,
+                    paddingTop: 15,
+                    backgroundColor: "#fcecca",
+                  }}
+                >
+                  {SampleData.map((item) => (
+                    <Carousel.Item style={{ padding: 10 }}>
+                      <Card className="landing-page__form-our-container">
+                        <Grid
+                          container
+                          spacing={2}
+                          justifyContent={"space-between"}
+                          alignItems={"center"}
+                        >
+                          <Grid
+                            item
+                            xs={3}
+                            md={3}
+                            alignItems={"space-around"}
+                            justifyContent={"space-around"}
+                            justifyItems={"space-around"}
+                          >
+                            <div className="landing-page__form-our-container__rightside-content">
+                              <div className="landing-page__form-our-container__img">
+                                <Avatar alt="Remy Sharp" src={item.img} />
+                              </div>
+                              <p className="landing-page__form-our-container__name">
+                                {item.name}
+                              </p>
+                              <img src={item.flag} />
+                            </div>
+                          </Grid>
+                          <Grid item xs={8} md={8}>
+                            <p className="landing-page__form-our-container__content-text">
+                              {item.content}
+                            </p>
+                          </Grid>
+                        </Grid>
+                      </Card>
+                    </Carousel.Item>
+                  ))}
+                </Carousel>
+              </div>
+            </div>
           </Grid>
         </Grid>
-        <Grid item sm={6} xs={12} className="iframe-content">
-          <div className="ifram-container">
+        <Grid item sm={6} xs={12} className="iframe-content" >
+          <div className="ifram-container" style={{marginTop:85}}>
             <iframe
               src="https://www.youtube.com/embed/tgbNymZ7vqY"
-              width='100%'
+              width="100%"
               className="iframes"
             ></iframe>
           </div>
