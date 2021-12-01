@@ -89,23 +89,23 @@ export default function DesktopScreenLandingPage(props: any) {
         justifyContent={"space-between"}
         alignItems={"center"}
       >
-        <Grid item xs={12} sm={3} className="img">
+        <Grid item xs={3} sm={3} className="img">
           <Typography>In the news</Typography>
         </Grid>
-        <Grid item xs={12} sm={3} className="logo-image-container">
+        <Grid item xs={3} sm={3} className="logo-image-container">
           <img src={gardian} className="logo-image" />
         </Grid>
-        <Grid item sm={3} xs={12} className="logo-image-container">
+        <Grid item sm={3} xs={3} className="logo-image-container">
           <img src={timesImg} className="logo-image" />
         </Grid>
-        <Grid item xs={12} sm={3} className="logo-image-container">
+        <Grid item xs={3} sm={3} className="logo-image-container">
           <img src={bbcNewsImg} className="logo-image" />
         </Grid>
       </Grid>
       <Grid
         container
         direction={"row"}
-        // justifyContent={"space-evenly"}
+        spacing={3}
         className="testimonial-container common-padding"
       >
         <Grid item sm={6} xs={12}>
@@ -113,48 +113,36 @@ export default function DesktopScreenLandingPage(props: any) {
             <h1 className="landing-page__heading">Testimonials</h1>
           </Grid>
           <Grid className="mobile-screen landing-page__sub-content ">
-            {/* <ul>
-              <li>
-                Here is a what out employees think about us and how we look out
-                for them
-              </li>
-            </ul> */}
-
             <div className="landing-page__form-cleaner" style={{}}>
-              <div>
+              <div className="carousel-container">
                 <Carousel
-                  style={{
-                    maxWidth: "400px",
-                    height: 200,
-                    paddingTop: 15,
-                    backgroundColor: "#fcecca",
-                  }}
+                  className="carousel"
+                  controls={false}
+                  indicators={false}
+                  interval={1000}
                 >
                   {SampleData.map((item) => (
                     <Carousel.Item style={{ padding: 10 }}>
                       <Card className="landing-page__form-our-container">
                         <Grid
                           container
-                          spacing={2}
+                          // spacing={}
                           justifyContent={"space-between"}
                           alignItems={"center"}
                         >
-                          <Grid
-                            item
-                            xs={3}
-                            md={3}
-                            alignItems={"space-around"}
-                            justifyContent={"space-around"}
-                            justifyItems={"space-around"}
-                          >
+                          <Grid item xs={3} md={3}>
                             <div className="landing-page__form-our-container__rightside-content">
                               <div className="landing-page__form-our-container__img">
                                 <Avatar alt="Remy Sharp" src={item.img} />
                               </div>
-                              <p className="landing-page__form-our-container__name">
-                                {item.name}
-                              </p>
-                              <img src={item.flag} />
+                              <div>
+                                <p className="landing-page__form-our-container__name">
+                                  {item.name}
+                                </p>
+                              </div>
+                              <div>
+                                <img src={item.flag} />
+                              </div>
                             </div>
                           </Grid>
                           <Grid item xs={8} md={8}>
@@ -171,13 +159,56 @@ export default function DesktopScreenLandingPage(props: any) {
             </div>
           </Grid>
         </Grid>
-        <Grid item sm={6} xs={12} className="iframe-content" >
-          <div className="ifram-container" style={{marginTop:85}}>
+        <Grid item sm={6} xs={12} className="iframe-content">
+          <div className="ifram-container">
             <iframe
               src="https://www.youtube.com/embed/tgbNymZ7vqY"
               width="100%"
               className="iframes"
             ></iframe>
+          </div>
+        </Grid>
+        <Grid item xs={12} className="desktop-screen">
+          <div className="landing-page__form-cleaner">
+            <h1 className="landing-page__heading">From our cleaner</h1>
+            <div>
+              {SampleData.map((item) => {
+                return (
+                  <Card className="landing-page__form-our-container">
+                    <Grid
+                      container
+                      spacing={2}
+                      justifyContent={"space-between"}
+                      alignItems={"center"}
+                    >
+                      <Grid
+                        item
+                        xs={3}
+                        md={3}
+                        alignItems={"space-around"}
+                        justifyContent={"space-around"}
+                        justifyItems={"space-around"}
+                      >
+                        <div className="landing-page__form-our-container__rightside-content">
+                          <div className="landing-page__form-our-container__img">
+                            <Avatar alt="Remy Sharp" src={item.img} />
+                          </div>
+                          <p className="landing-page__form-our-container__name">
+                            {item.name}
+                          </p>
+                          <img src={item.flag} />
+                        </div>
+                      </Grid>
+                      <Grid item xs={8} md={8}>
+                        <p className="landing-page__form-our-container__content-text">
+                          {item.content}
+                        </p>
+                      </Grid>
+                    </Grid>
+                  </Card>
+                );
+              })}
+            </div>
           </div>
         </Grid>
       </Grid>
